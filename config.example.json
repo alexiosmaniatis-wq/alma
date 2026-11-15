@@ -1,0 +1,31 @@
+{
+  "profiles": [
+    {
+      "id": "local-chat",
+      "kind": "llama.cpp",
+      "baseUrl": "http://127.0.0.1:8080",
+      "backendModel": "local-chat",
+      "defaults": { "temperature": 0.7 },
+      "command": ["llama-server", "-m", "/path/to/model.gguf", "--host", "127.0.0.1", "--port", "8080", "-c", "4096"]
+    },
+    {
+      "id": "local-image",
+      "kind": "image",
+      "baseUrl": "http://127.0.0.1:8188",
+      "backendModel": "image-model"
+    },
+    {
+      "id": "local-video",
+      "kind": "video",
+      "baseUrl": "http://127.0.0.1:8189",
+      "backendModel": "video-model"
+    }
+  ],
+  "routes": [
+    { "method": "POST", "path": "/v1/chat/completions", "kind": "llama.cpp", "backendPath": "/v1/chat/completions" },
+    { "method": "POST", "path": "/v1/images/generations", "kind": "image", "backendPath": "/v1/images/generations" },
+    { "method": "POST", "path": "/v1/videos/generations", "kind": "video", "backendPath": "/v1/videos/generations" },
+    { "method": "POST", "path": "/v1/videos/image-to-video", "kind": "video", "backendPath": "/v1/videos/image-to-video" },
+    { "method": "GET", "path": "/v1/videos/status", "kind": "video", "backendPath": "/v1/videos/status" }
+  ]
+}
