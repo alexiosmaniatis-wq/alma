@@ -13,3 +13,15 @@ export const version = '0.1.0';
 export function greet(name: string): string {
   return `Welcome to Alma, ${name}!`;
 }
+
+// String utilities
+export * from './string';
+
+// Collection utilities
+export * from './collections';
+
+// Validation utilities
+export * from './validation';
+
+// Color utilities
+export * from './color';
