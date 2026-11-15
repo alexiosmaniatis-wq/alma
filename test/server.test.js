@@ -16,6 +16,15 @@ test('authenticated routing, media workflows, and managed profiles', async t => 
     let data = '';
     for await (const chunk of req) data += chunk;
     requests.push({ url: req.url, body: data && JSON.parse(data), authorization: req.headers.authorization });
+    if (req.url === '/stream-api') {
+      res.writeHead(200, { 'content-type': 'text/event-stream' });
+      res.write('data: first\n\n');
+      return res.end('data: second\n\n');
+    }
+    if (req.url === '/redirect-api') {
+      res.writeHead(302, { location: '/image-api' });
+      return res.end();
+    }
     res.writeHead(201, { 'content-type': 'application/json' });
     res.end(JSON.stringify({ received: true }));
   });
@@ -32,6 +41,8 @@ test('authenticated routing, media workflows, and managed profiles', async t => 
       { method: 'POST', path: '/chat', kind: 'llama.cpp', backendPath: '/chat-api' },
       { method: 'POST', path: '/image', kind: 'image', backendPath: '/image-api' },
       { method: 'POST', path: '/video', kind: 'video', backendPath: '/video-api' },
+      { method: 'POST', path: '/stream', kind: 'llama.cpp', backendPath: '/stream-api' },
+      { method: 'POST', path: '/redirect', kind: 'image', backendPath: '/redirect-api' },
       { method: 'GET', path: '/status', kind: 'video', backendPath: '/status-api' }
     ]
   };
@@ -61,6 +72,11 @@ test('authenticated routing, media workflows, and managed profiles', async t => 
   assert.equal(requests[3].body.image, 'encoded-image');
   assert.equal((await fetch(base + '/status?model=video&job=123', { headers })).status, 201);
   assert.equal(requests[4].url, '/status-api?model=video&job=123');
+  const stream = await post('/stream', { model: 'chat' });
+  assert.equal(stream.headers.get('content-type'), 'text/event-stream');
+  assert.equal(await stream.text(), 'data: first\n\ndata: second\n\n');
+  assert.equal(requests[5].body.temperature, 0.3);
+  assert.equal((await post('/redirect', { model: 'image' })).status, 502);
 
   assert.equal((await post('/v1/models/chat/start', {})).status, 202);
   assert.equal((await post('/v1/models/chat/start', {})).status, 409);
