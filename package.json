@@ -1,9 +1,57 @@
 {
   "name": "alma",
   "version": "0.1.0",
-  "description": "A modern development and design toolkit focused on excellence and creativity",
+  "description": "A modern development and design toolkit focused on excellence and creativity. TypeScript utilities for strings, collections, validation, and color manipulation.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/alma"
+  },
+  "homepage": "https://github.com/yourusername/alma#readme",
+  "bugs": {
+    "url": "https://github.com/yourusername/alma/issues"
+  },
+  "author": "Your Name (https://github.com/yourusername)",
+  "maintainers": [
+    {
+      "name": "Your Name",
+      "email": "your.email@example.com",
+      "url": "https://github.com/yourusername"
+    }
+  ],
+  "license": "Apache-2.0",
+  "keywords": [
+    "development",
+    "design",
+    "toolkit",
+    "modern",
+    "typescript",
+    "utilities",
+    "string-utilities",
+    "collection-utilities",
+    "validation",
+    "color-utilities",
+    "type-safe",
+    "javascript",
+    "npm"
+  ],
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "dev": "tsc --watch",
     "build": "tsc",
@@ -16,17 +64,11 @@
     "test:coverage": "vitest --coverage",
     "type-check": "tsc --noEmit",
     "clean": "rm -rf dist coverage .turbo",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "prepublishOnly": "npm run build && npm run type-check && npm run lint && npm run test",
+    "prebuild": "npm run clean",
+    "publish:dry": "npm publish --dry-run"
   },
-  "keywords": [
-    "development",
-    "design",
-    "toolkit",
-    "modern",
-    "typescript"
-  ],
-  "author": "",
-  "license": "Apache-2.0",
   "devDependencies": {
     "@eslint/js": "^9.0.0",
     "@types/node": "^20.10.0",

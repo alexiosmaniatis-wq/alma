@@ -1,0 +1,102 @@
+# .npmrc template for publishing Alma to npm
+
+# Uncomment and configure these settings for npm publishing:
+
+# ============================================================================
+# NPM REGISTRY CONFIGURATION
+# ============================================================================
+
+# Default npm registry (usually not needed unless you use a private registry)
+# registry=https://registry.npmjs.org/
+
+# For private registries or scoped packages:
+# @yourscopname:registry=https://registry.npmjs.org/
+
+# ============================================================================
+# AUTHENTICATION
+# ============================================================================
+
+# To publish to npm, you need to authenticate. Use ONE of these methods:
+
+# METHOD 1: NPM Token (Recommended)
+# Get token from: https://www.npmjs.com/settings/yourusername/tokens
+# Create a read-write token for publishing
+# Then uncomment and set:
+# //registry.npmjs.org/:_authToken=npm_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+# METHOD 2: Use npm login
+# Run: npm login
+# This will create credentials in ~/.npmrc
+# No need to set _authToken in project .npmrc
+
+# METHOD 3: Environment Variable
+# Set NPM_TOKEN environment variable before publishing:
+# export NPM_TOKEN=npm_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# npm publish
+
+# ============================================================================
+# PUBLISHING OPTIONS
+# ============================================================================
+
+# Whether to save installed packages to package.json by default
+# (set to false for publishing to avoid accidental dependency changes)
+save=false
+
+# ============================================================================
+# GIT & SIGNING (Optional)
+# ============================================================================
+
+# Sign commits and tags during releases
+# sign-git-commit=true
+# sign-git-tag=true
+
+# ============================================================================
+# USAGE INSTRUCTIONS
+# ============================================================================
+
+# Before publishing:
+# 1. Configure your NPM token using one of the methods above
+# 2. Run: npm run build
+# 3. Run: npm publish --dry-run (to test)
+# 4. Run: npm publish (to publish for real)
+#
+# Publishing runs prepublishOnly script automatically:
+# - npm run build
+# - npm run type-check
+# - npm run lint
+# - npm run test
+#
+# If all checks pass, package is published to npm registry
+
+# ============================================================================
+# HELPFUL COMMANDS
+# ============================================================================
+
+# Login to npm (interactive):
+# npm login
+
+# Check who you're logged in as:
+# npm whoami
+
+# View your npm profile:
+# npm view ~username
+
+# List npm tokens:
+# npm token list
+
+# Create new token:
+# npm token create
+
+# Publish to npm:
+# npm publish
+
+# Publish to npm (dry run - doesn't actually publish):
+# npm publish --dry-run
+
+# Publish a specific version tag:
+# npm publish --tag beta
+# npm publish --tag next
+# npm publish --tag latest
+
+# Unpublish a version (only within 24 hours of publishing):
+# npm unpublish alma@0.1.0
