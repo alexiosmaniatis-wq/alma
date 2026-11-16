@@ -15,13 +15,13 @@ export function greet(name: string): string {
 }
 
 // String utilities
-export * from './string';
+export * from './string.js';
 
 // Collection utilities
-export * from './collections';
+export * from './collections.js';
 
 // Validation utilities
-export * from './validation';
+export * from './validation.js';
 
 // Color utilities
-export * from './color';
+export * from './color.js';

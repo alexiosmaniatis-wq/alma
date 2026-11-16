@@ -105,4 +105,4 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for release procedures.
 
 ---
 
-For the complete development history, see [Git commit log](https://github.com/yourusername/alma/commits/main).
+For the complete development history, see [Git commit log](https://github.com/alexiosmaniatis-wq/alma/commits/main).

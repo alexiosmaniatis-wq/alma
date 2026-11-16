@@ -71,13 +71,16 @@ import * as alma from 'alma';
 const result = alma.slugify('Hello World');
 ```
 
-### CommonJS
+### CommonJS projects
 
 ```javascript
-// CommonJS imports
-const { slugify, camelCase } = require('alma');
+// Alma is an ES module; CommonJS projects can load it with dynamic import.
+async function main() {
+  const { slugify, camelCase } = await import('alma');
+  console.log(slugify('Hello World'));
+}
 
-const result = slugify('Hello World');
+main();
 ```
 
 ### Mixed Imports
@@ -763,7 +766,7 @@ groupBy(largeArray, item => item.category);
 
 - Check the [examples in README](./README.md#utility-modules)
 - Review [test files](./tests/) for usage patterns
-- Open an issue on [GitHub](https://github.com/yourusername/alma/issues)
+- Open an issue on [GitHub](https://github.com/alexiosmaniatis-wq/alma/issues)
 - See [CONTRIBUTING.md](./CONTRIBUTING.md) for support options
 
 ---

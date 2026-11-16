@@ -59,9 +59,9 @@ representative at an online or offline event.
 ## Enforcement
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
-reported to the community leaders responsible for enforcement at
-your-email@example.com. All complaints will be reviewed and investigated
-promptly and fairly.
+reported privately to the repository owner through
+[their GitHub profile](https://github.com/alexiosmaniatis-wq). All complaints
+will be reviewed and investigated promptly and fairly.
 
 All community leaders are obligated to respect the privacy and security of the
 reporter of any incident.
@@ -137,6 +137,7 @@ For answers to common questions about this code of conduct, see the FAQ at
 
 If you have concerns about the conduct of any community member, or if you
 experience any violations of this Code of Conduct, please contact the community
-leaders at your-email@example.com. All reports will be kept confidential.
+leaders through [the repository owner's GitHub profile](https://github.com/alexiosmaniatis-wq).
+All reports will be kept confidential.
 
 Thank you for helping us maintain a welcoming and inclusive community! 🌈

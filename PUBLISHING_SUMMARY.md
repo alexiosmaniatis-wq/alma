@@ -235,17 +235,16 @@ be752fa - docs(usage): add comprehensive usage guide
 1. **Update Credentials in package.json**
    ```json
    {
-     "author": "Your Name (https://github.com/yourusername)",
+     "author": "alexiosmaniatis-wq (https://github.com/alexiosmaniatis-wq)",
      "maintainers": [{
-       "name": "Your Name",
-       "email": "your-email@example.com",
-       "url": "https://github.com/yourusername"
+       "name": "alexiosmaniatis-wq",
+       "url": "https://github.com/alexiosmaniatis-wq"
      }]
    }
    ```
 
 2. **Update URLs**
-   - Replace "yourusername" with actual GitHub username in:
+   - Confirm GitHub URLs use alexiosmaniatis-wq/alma
      - package.json (repository, homepage, bugs)
      - README.md (links)
      - All documentation files

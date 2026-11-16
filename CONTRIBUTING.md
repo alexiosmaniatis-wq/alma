@@ -35,7 +35,7 @@ This project adheres to the Contributor Covenant Code of Conduct. By participati
 2. Clone your fork locally:
 
 ```bash
-git clone https://github.com/yourusername/alma.git
+git clone https://github.com/alexiosmaniatis-wq/alma.git
 cd alma
 ```
 

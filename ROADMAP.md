@@ -182,4 +182,4 @@ Development priorities are determined by:
 
 **Next Review**: February 2027
 
-For the latest updates, check [GitHub Releases](https://github.com/yourusername/alma/releases).
+For the latest updates, check [GitHub Releases](https://github.com/alexiosmaniatis-wq/alma/releases).

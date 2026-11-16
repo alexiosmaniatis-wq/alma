@@ -314,7 +314,7 @@ ROADMAP.md
 
 ### Module Systems
 
-- [x] CommonJS compatible (require works)
+- [x] ESM package metadata matches the generated JavaScript
 - [x] ES Modules compatible (import works)
 - [x] TypeScript compatible
 - [x] Exports properly configured
@@ -429,7 +429,7 @@ npm list    # Verify dependencies
 ### Next Steps
 
 1. Update author/maintainer information in package.json
-2. Update GitHub URLs in package.json (change yourusername)
+2. Verify GitHub URLs in package.json point to alexiosmaniatis-wq/alma
 3. Create npm account if needed
 4. Configure npm authentication
 5. Run `npm publish` to publish to npm registry

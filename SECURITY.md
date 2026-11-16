@@ -2,13 +2,13 @@
 
 ## Reporting a Vulnerability
 
-If you discover a security vulnerability in Alma, please report it by sending an email to your-email@example.com with the subject line "SECURITY: Vulnerability Report".
+If you discover a security vulnerability in Alma, report it privately using [GitHub's vulnerability reporting](https://github.com/alexiosmaniatis-wq/alma/security/advisories/new). If that option is unavailable, contact the repository owner through [their GitHub profile](https://github.com/alexiosmaniatis-wq). Do not include vulnerability details in a public issue.
 
 **Do not** open a public GitHub issue for security vulnerabilities.
 
 ### Reporting Process
 
-1. **Email Details**: Send a clear description including:
+1. **Report Details**: Send a clear description including:
    - A description of the vulnerability
    - Steps to reproduce the issue
    - Potential impact of the vulnerability
@@ -160,9 +160,9 @@ These are only used during development and testing, not included in published pa
 
 Security advisories are published in:
 
-1. **GitHub Advisories**: https://github.com/yourusername/alma/security/advisories
+1. **GitHub Advisories**: https://github.com/alexiosmaniatis-wq/alma/security/advisories
 2. **npm Security**: https://www.npmjs.com/package/alma (if any)
-3. **Release Notes**: https://github.com/yourusername/alma/releases
+3. **Release Notes**: https://github.com/alexiosmaniatis-wq/alma/releases
 
 ## Scope of This Policy
 
@@ -209,7 +209,7 @@ The Alma codebase is designed with security in mind:
 
 ## Security Contacts
 
-- **Email**: your-email@example.com
+- **Private reporting**: https://github.com/alexiosmaniatis-wq/alma/security/advisories/new
 - **GitHub Issues**: For non-security issues only
 
 ---

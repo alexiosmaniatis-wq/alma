@@ -291,7 +291,7 @@ We welcome contributions! Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/alma.git
+git clone https://github.com/alexiosmaniatis-wq/alma.git
 cd alma
 
 # Install dependencies
@@ -309,10 +309,10 @@ npm run build && npm run type-check && npm run lint && npm run test
 
 ### Support & Issues
 
-- 🐛 **[Report Bugs](https://github.com/yourusername/alma/issues/new?template=bug_report.md)** - Use the bug template
-- 💡 **[Request Features](https://github.com/yourusername/alma/issues/new?template=feature_request.md)** - Use the feature template
-- 📚 **[Documentation Issues](https://github.com/yourusername/alma/issues/new?template=documentation.md)** - Help improve docs
-- 💬 **[Discussions](https://github.com/yourusername/alma/discussions)** - Ask questions and share ideas
+- 🐛 **[Report Bugs](https://github.com/alexiosmaniatis-wq/alma/issues/new?template=bug_report.md)** - Use the bug template
+- 💡 **[Request Features](https://github.com/alexiosmaniatis-wq/alma/issues/new?template=feature_request.md)** - Use the feature template
+- 📚 **[Documentation Issues](https://github.com/alexiosmaniatis-wq/alma/issues/new?template=documentation.md)** - Help improve docs
+- 💬 **[Discussions](https://github.com/alexiosmaniatis-wq/alma/discussions)** - Ask questions and share ideas
 
 ## License
 
