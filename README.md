@@ -173,6 +173,9 @@ npm install
 ### Development
 
 ```bash
+# Start the interactive web demo
+npm run demo
+
 # Start development mode with file watching
 npm run dev
 
@@ -188,6 +191,9 @@ npm run lint:fix
 # Format code
 npm run format
 ```
+
+Open the local URL printed by `npm run demo` in your browser. The demo uses the
+library's source directly and does not require a separate build.
 
 ### Testing
 

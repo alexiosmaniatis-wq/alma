@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alma utility demo</title>
+    <style>
+      body { margin: 0; font: 16px/1.5 system-ui, sans-serif; color: #172033; background: #f3f5fa; }
+      main { max-width: 720px; margin: 0 auto; padding: 3rem 1.25rem; }
+      h1 { margin-bottom: 0; }
+      .intro { color: #536078; }
+      section { margin-top: 1.25rem; padding: 1.5rem; border: 1px solid #dfe4ee; border-radius: 12px; background: white; }
+      h2 { margin-top: 0; font-size: 1.2rem; }
+      label { display: block; font-weight: 600; }
+      input { box-sizing: border-box; width: 100%; margin-top: .5rem; padding: .65rem; border: 1px solid #aeb9ca; border-radius: 6px; font: inherit; }
+      input[type="color"] { height: 3rem; padding: .2rem; }
+      dl { margin-bottom: 0; }
+      dt { color: #536078; }
+      dd { margin: 0 0 .75rem; overflow-wrap: anywhere; font-family: monospace; }
+      dd:last-child { margin-bottom: 0; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Alma utility demo</h1>
+      <p class="intro">Try a few of Alma's string, validation, and color utilities.</p>
+      <section>
+        <h2>String utilities</h2>
+        <label for="text">Text</label>
+        <input id="text" value="Hello World" />
+        <dl>
+          <dt>slugify</dt><dd id="slug"></dd>
+          <dt>camelCase</dt><dd id="camel"></dd>
+        </dl>
+      </section>
+      <section>
+        <h2>Email validation</h2>
+        <label for="email">Email address</label>
+        <input id="email" type="email" value="hello@example.com" />
+        <dl><dt>isEmail</dt><dd id="email-result"></dd></dl>
+      </section>
+      <section>
+        <h2>Color utilities</h2>
+        <label for="color">Color</label>
+        <input id="color" type="color" value="#3157c8" />
+        <dl>
+          <dt>hexToRgb</dt><dd id="rgb"></dd>
+          <dt>contrastRatio with white</dt><dd id="contrast"></dd>
+        </dl>
+      </section>
+    </main>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
